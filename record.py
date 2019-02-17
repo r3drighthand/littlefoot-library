@@ -1,4 +1,4 @@
-class ReturnRecord:
+class Record:
   def __init__(self, title, author, pages, decimal_number, read_status):
     self.title = title
     self.author = author
