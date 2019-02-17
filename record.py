@@ -5,3 +5,6 @@ class Record:
     self.pages = pages
     self.decimal_number = decimal_number
     self.read_status = read_status
+
+
+  # Methods will go here
