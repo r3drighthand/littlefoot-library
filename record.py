@@ -1,10 +1,37 @@
 class Record:
-  def __init__(self, title, author, pages, decimal_number, read_status):
+  def __init__(self, title, author, pages, decimal_category, read_status):
     self.title = title
     self.author = author
     self.pages = pages
-    self.decimal_number = decimal_number
+    self.decimal_category = decimal_category
     self.read_status = read_status
 
+  def get_decimal_category(self):
+    decimal_string = str(self.decimal_category)
+    category_indicator = decimal_string[0]
 
-  # Methods will go here
+    if category_indicator == "0":
+      return "Computer Science, Informtion, General Works"
+    elif category_indicator == "1":
+      return "Philosophy & Psychology"
+    elif category_indicator == "2":
+      return "Religion"
+    elif category_indicator == "3":
+      return "Social Sciences"
+    elif category_indicator == "4":
+      return "Language"
+    elif category_indicator == "5":
+      return "Pure Science"
+    elif category_indicator == "6":
+      return "Applied Science"
+    elif category_indicator == "7":
+      return "Arts & Recreation"
+    elif category_indicator == "8":
+      return "Literature"
+    else:
+      return "Geography"
+
+  # Sanity check:
+  # def get_title():
+  #   print(self.title)
+
