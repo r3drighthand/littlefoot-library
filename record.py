@@ -6,47 +6,32 @@ class Record:
     self.decimal_category = decimal_category
     self.read_status = read_status
 
-  def get_dewey_decimal_category(self):
-    # >>> string = str(12345.456)
-    # >>> string
-    # '12345.456'
-    # >>> zero_index = string[0]
-    # >>> zero_index
-    # '1'
+  def get_decimal_category(self):
+    decimal_string = str(self.decimal_category)
+    category_indicator = decimal_string[0]
 
-    if self.decimal_category == 000:
+    if category_indicator == "0":
       return "Computer Science, Informtion, General Works"
-    elif self.decimal_category == 100:
+    elif category_indicator == "1":
       return "Philosophy & Psychology"
-    elif self.decimal_category == 200:
+    elif category_indicator == "2":
       return "Religion"
-    elif self.decimal_category == 300:
+    elif category_indicator == "3":
       return "Social Sciences"
-    elif self.decimal_category == 400:
+    elif category_indicator == "4":
       return "Language"
-    elif self.decimal_category == 500:
+    elif category_indicator == "5":
       return "Pure Science"
-    elif self.decimal_category == 600:
+    elif category_indicator == "6":
       return "Applied Science"
-    elif self.decimal_category == 700:
+    elif category_indicator == "7":
       return "Arts & Recreation"
-    elif self.decimal_category == 800:
+    elif category_indicator == "8":
       return "Literature"
-    elif self.decimal_category == 900:
-      return "Geography"
     else:
-      return "Category Not Found!"
+      return "Geography"
 
   # Sanity check:
-  def get_title():
-    print(self.title)
-
-    
-# PSEUDOCODE
-# Grab first integer of DDC & assign variable
-  # Need to convert decimal_category to string?
-  # str.split() delimiter="."
-    # "120.536DUC"
-# Compare variable value with ddc
-  # return correct category
+  # def get_title():
+  #   print(self.title)
 
