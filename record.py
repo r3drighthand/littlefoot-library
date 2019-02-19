@@ -5,7 +5,6 @@ class Record:
     self.pages = pages
     self.decimal_category = decimal_category
     self.read = read
-    # self.total_pages_read = None
 
   def get_decimal_category(self):
     decimal_string = str(self.decimal_category)
@@ -40,4 +39,3 @@ class Record:
       return int(self.pages) / 2
     elif read_status == "Unread":
       return 0
-
