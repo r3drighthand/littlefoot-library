@@ -1,10 +1,11 @@
 class Record:
-  def __init__(self, title, author, pages, decimal_category, read_status):
+  def __init__(self, title, author, pages, decimal_category, read):
     self.title = title
     self.author = author
     self.pages = pages
     self.decimal_category = decimal_category
-    self.read_status = read_status
+    self.read = read
+    # self.total_pages_read = None
 
   def get_decimal_category(self):
     decimal_string = str(self.decimal_category)
@@ -31,7 +32,12 @@ class Record:
     else:
       return "Geography"
 
-  # Sanity check:
-  # def get_title():
-  #   print(self.title)
+  def get_total_pages_read(self):
+    read_status = str(self.read)
+    if read_status == "Fully":
+      return int(self.pages)
+    elif read_status == "Partially":
+      return int(self.pages) / 2
+    elif read_status == "Unread":
+      return 0
 
