@@ -7,7 +7,7 @@ def count_total_pages_read():
   for record in return_records:
     pages_read = record.get_total_pages_read()
     total_pages += pages_read
-  print("Total Pages Read: %s" %(total_pages))
+  print "Total Pages Read: %s" %(total_pages)
 
 def count_pages_by_category():
   category_dictionary = {}
@@ -16,22 +16,13 @@ def count_pages_by_category():
     value = record.get_total_pages_read()
 
     if key in category_dictionary:
-      category_dictionary[key] += value
+      category_dictionary[key] += value 
     else:
-      category_dictionary[key] = value
+      if value > 0:
+        category_dictionary[key] = value
   
-  # Debugging
-  print(category_dictionary)
-
-
-
-# Formatting --
-# Total Pages Read: number
-# By Category: 
-  # Philosophy: 333
-  # Pure Science: 246
-  # Computer Science: 90
-
+  print "By Category:"
+  print '  ' + '  '.join(['{0}: {1}\n'.format(k, v) for k,v in category_dictionary.iteritems()])
 
 
 count_total_pages_read()
