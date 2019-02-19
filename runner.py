@@ -1,6 +1,4 @@
 from return_record_parser import *
-from record import *
-
 
 def count_total_pages_read():
   total_pages = 0
