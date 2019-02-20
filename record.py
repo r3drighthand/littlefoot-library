@@ -1,6 +1,7 @@
 class Record:
-  def __init__(self, title, author, pages, decimal_category, read): # Maybe compress this to Python version of args={} (still relies on arg order)
-  # Zen of Python: “Explicit is better than implicit.”
+  # Maybe compress this to Python version of args={} (still relies on arg order)
+  # Zen of Python: Explicit is better than implicit.
+  def __init__(self, title, author, pages, decimal_category, read): 
     self.title = title
     self.author = author
     self.pages = pages
