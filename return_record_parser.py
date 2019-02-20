@@ -3,6 +3,8 @@ from record import *
 
 return_records = []
 
+# There is no immediate need for considering the durability of data after the output is generated.
+
 with open('return_record.csv') as csv_file:
   csv_reader = csv.reader(csv_file, delimiter=',')
   for row in csv_reader:
