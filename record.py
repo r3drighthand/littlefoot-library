@@ -1,12 +1,13 @@
 class Record:
-  def __init__(self, title, author, pages, decimal_category, read):
+  def __init__(self, title, author, pages, decimal_category, read): # Maybe compress this to Python version of args={} (still relies on arg order)
+  # Zen of Python: “Explicit is better than implicit.”
     self.title = title
     self.author = author
     self.pages = pages
     self.decimal_category = decimal_category
     self.read = read
 
-  def get_decimal_category(self):
+  def get_decimal_category(self): # Is this method necessary?
     decimal_string = str(self.decimal_category)
     category_indicator = decimal_string[0]
 
@@ -28,8 +29,10 @@ class Record:
       return "Arts & Recreation"
     elif category_indicator == "8":
       return "Literature"
-    else:
+    else: # Change this to another ELIF for == "9"
       return "Geography"
+    # Put an ELSE here in case decimal_string[0] != integer
+    # But why wouldn't it be?
 
   def get_total_pages_read(self):
     read_status = str(self.read)
