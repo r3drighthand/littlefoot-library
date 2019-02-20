@@ -4,6 +4,7 @@ from record import *
 return_records = []
 
 # There is no immediate need for considering the durability of data after the output is generated.
+# Structured input like CSV just seemed easier
 
 with open('return_record.csv') as csv_file:
   csv_reader = csv.reader(csv_file, delimiter=',')
