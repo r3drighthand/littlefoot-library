@@ -1,5 +1,5 @@
 class Record:
-  def __init__(self, title, author, pages, decimal_category, read):
+  def __init__(self, title, author, pages, decimal_category, read): 
     self.title = title
     self.author = author
     self.pages = pages
@@ -28,8 +28,10 @@ class Record:
       return "Arts & Recreation"
     elif category_indicator == "8":
       return "Literature"
-    else:
+    elif category_indicator == "9":
       return "Geography"
+    else:
+      return "X" # Need error handling here
 
   def get_total_pages_read(self):
     read_status = str(self.read)
