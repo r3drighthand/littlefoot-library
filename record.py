@@ -1,6 +1,4 @@
 class Record:
-  # Maybe compress this to Python version of args={} (still relies on arg order)
-  # Zen of Python: Explicit is better than implicit.
   def __init__(self, title, author, pages, decimal_category, read): 
     self.title = title
     self.author = author
@@ -33,7 +31,7 @@ class Record:
     elif category_indicator == "9":
       return "Geography"
     else:
-      return "X" # Need error handling
+      return "X" # Need error handling here
 
   def get_total_pages_read(self):
     read_status = str(self.read)
