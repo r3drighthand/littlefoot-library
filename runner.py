@@ -1,9 +1,5 @@
 from return_record_parser import return_records
 
-# Maybe change name to print_pages_by_category (more explicit)
-# Could refactor this into one method for both and delete count_total_pages_read because I'm calling record.get_total_pages_read() twice.
-# Or could call count_total_pages_read() inside count_pages_by_category().
-
 def count_total_pages_read(): 
   total_pages = 0
   for record in return_records:
