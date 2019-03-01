@@ -2,16 +2,16 @@ class Record:
   def __init__(self, title, author, pages, decimal_category, read): 
     self.title = title
     self.author = author
-    self.pages = pages
-    self.decimal_category = decimal_category
-    self.read = read
+    self.pages = int(pages)
+    self.decimal_category = str(decimal_category)
+    self.read = str(read)
 
   def get_decimal_category(self):
-    decimal_string = str(self.decimal_category)
+    decimal_string = self.decimal_category
     category_indicator = decimal_string[0]
 
     if category_indicator == "0":
-      return "Computer Science, Informtion, General Works"
+      return "Computer Science, Information, General Works"
     elif category_indicator == "1":
       return "Philosophy & Psychology"
     elif category_indicator == "2":
@@ -34,10 +34,10 @@ class Record:
       return "X" # Need error handling here
 
   def get_total_pages_read(self):
-    read_status = str(self.read)
+    read_status = self.read
     if read_status == "Fully":
-      return int(self.pages)
+      return self.pages
     elif read_status == "Partially":
-      return int(self.pages) / 2
+      return self.pages / 2
     elif read_status == "Unread":
       return 0
