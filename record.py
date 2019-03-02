@@ -7,21 +7,15 @@ class Record:
     self.read = str(read)
 
   # Implement Python's try/catch/finally error handling
-
   def get_decimal_category(self):
     category_id = self.decimal_category[0]
 
     message_dictionary = {"0": "Computer Science", "1": "Philosophy", "2": "Religion", "3": "Social Sciences", "4": "Language", "5": "Pure Science", "6": "Applied Science", "7": "Art", "8": "Literature", "9": "Geography"}
 
-    # assert int(category_id), "Decimal categories must begin with an integer!"
-
     for key in message_dictionary:
-    # try: 
       if category_id == key:
         return message_dictionary[key]
-      # except: 
-      #   raise Exception('Decimal categories must begin with an integer!')
-
+        
   def get_total_pages_read(self):
     read_status = self.read
     if read_status == "Fully":
