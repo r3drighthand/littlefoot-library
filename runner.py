@@ -24,7 +24,7 @@ def count_pages_by_category():
 
   # This iterates through the keys and values of the dictionary, creating a formatted string for each key/value pair.
   # There's a cleaner way to write this, without using join.
-  # iteritems returns an iterator over the dictionary’s (key, value) pairs.
+  # iteritems returns an iterator over the dictionary's (key, value) pairs.
 
 
   # Refactor count_pages_by_category and have it return the dictionary object
