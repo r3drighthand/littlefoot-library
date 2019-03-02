@@ -22,6 +22,8 @@ def count_pages_by_category():
   print "By Category:"
   print '  ' + '  '.join(['{0}: {1}\n'.format(k, v) for k, v in category_dictionary.iteritems()])
 
+  # Refactor count_pages_by_category and have it return the dictionary object
+  # Then write methods that take that dictionary and apply logic to return (or print) the necessary data.
 
 
 
