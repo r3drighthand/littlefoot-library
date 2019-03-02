@@ -1,4 +1,4 @@
-from return_record_parser import return_records
+from return_record_parser import return_records, errors
 
 def count_total_pages_read(): 
   total_pages = 0
@@ -25,8 +25,12 @@ def count_pages_by_category():
   # Refactor count_pages_by_category and have it return the dictionary object
   # Then write methods that take that dictionary and apply logic to return (or print) the necessary data.
 
+def print_errors():
+  if errors > 0:
+    print "%s errors \n" %(errors)
 
 
 
+print_errors()
 count_total_pages_read()
 count_pages_by_category()

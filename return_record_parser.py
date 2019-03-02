@@ -2,10 +2,26 @@ import csv
 from record import *
 
 return_records = []
+errors = 0
 
 with open('return_record.csv') as csv_file:
-  csv_reader = csv.reader(csv_file, delimiter=',')
-  for row in csv_reader:
-    return_records.append(Record(row[0], row[1], row[2], row[3], row[4]))
+  reader = csv.reader(csv_file, delimiter=',')
+  next(reader)
+
+  for row in reader:
+    title = row[0]
+    author = row[1]
+    pages = row[2]
+    decimal_category = row[3]
+    read = row[4]
+
+    try:
+      pages_tested = int(pages)
+    except:
+      print "Did not find pages for: %s" %(title)
+      errors += 1
+      continue
+
+    return_records.append(Record(title, author, pages, decimal_category, read))
 
 # Need data validations before Record is created.
