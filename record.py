@@ -1,7 +1,7 @@
 class Record:
   def __init__(self, title, author, pages, decimal_category, read): 
-    self.title = title
-    self.author = author
+    self.title = str(title)
+    self.author = str(author)
     self.pages = int(pages)
     self.decimal_category = str(decimal_category)
     self.read = str(read)
@@ -25,7 +25,7 @@ class Record:
         if category_id == key:
           return message_dictionary[key]
       except:
-        return "None"
+        return "None" # Returns "None" whether you like it or not because error-handling not working like you think it does.
         
   def get_total_pages_read(self):
     read_status = self.read
