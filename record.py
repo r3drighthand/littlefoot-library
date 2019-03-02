@@ -25,7 +25,7 @@ class Record:
         if category_id == key:
           return message_dictionary[key]
       except:
-        return "None" # "None" gets returned
+        return "None"
         
   def get_total_pages_read(self):
     read_status = self.read
