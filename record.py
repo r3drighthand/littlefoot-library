@@ -19,7 +19,7 @@ class Record:
       "7": "Art", 
       "8": "Literature", 
       "9": "Geography"
-      }
+    }
     for key in message_dictionary:
       try:
         if category_id == key:
@@ -28,10 +28,13 @@ class Record:
         return "None" # Returns "None" whether you like it or not because error-handling not working like you think it does.
         
   def get_total_pages_read(self):
-    read_status = self.read
-    if read_status == "Fully":
-      return self.pages
-    elif read_status == "Partially":
-      return self.pages / 2
-    elif read_status == "Unread":
-      return 0
+    status = self.read
+    message_dictionary = {
+      "Fully": self.pages,
+      "Partially": self.pages/2,
+      "Unread": 0
+    }
+    for key in message_dictionary:
+      if status == key:
+        return message_dictionary[key]
+
