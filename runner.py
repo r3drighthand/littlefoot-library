@@ -26,7 +26,9 @@ def count_pages_by_category():
   # Then write methods that take that dictionary and apply logic to return (or print) the necessary data.
 
 def print_errors():
-  if errors > 0:
+  if errors == 1:
+    print "%s error \n" %(errors)
+  elif errors > 1:
     print "%s errors \n" %(errors)
 
 
