@@ -7,19 +7,23 @@ def run_everything():
 
 def get_category_dictionary():
   category_dictionary = {}
+
   for record in return_records:
     key = record.get_decimal_category()
     value = record.get_total_pages_read()
+
     if key in category_dictionary:
       category_dictionary[key] += value 
     else:
       if value > 0:
         category_dictionary[key] = value
+
   return category_dictionary
 
 def count_total_pages_read(): 
   dictionary = get_category_dictionary()
   total_pages = 0
+
   for key in dictionary:
     total_pages += dictionary[key]
   print "Total Pages Read: %s" %(total_pages)
