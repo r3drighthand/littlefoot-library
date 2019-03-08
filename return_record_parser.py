@@ -3,7 +3,7 @@ import re
 from record import *
 
 return_records = []
-problem_records = []
+# problem_records = []
 errors = 0
 
 with open('return_record.csv') as csv_file:
@@ -30,7 +30,7 @@ with open('return_record.csv') as csv_file:
     except:
       print "Did not find Dewey Decimal Category for: %s" %(title)
       print "Error occured on line %s" %(reader.line_num)
-      problem_records.append(reader.line_num)
+      # problem_records.append(reader.line_num)
       errors += 1
       continue
 
