@@ -25,8 +25,9 @@ class Record:
         if category_id == key:
           return message_dictionary[key]
       except:
-        return "None" # Returns "None" whether you like it or not because error-handling not working like you think it does.
-        
+        return "None" 
+        # Need to change to work with error handling in Parser
+
   def get_total_pages_read(self):
     status = self.read
     message_dictionary = {
