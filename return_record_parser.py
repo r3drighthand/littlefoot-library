@@ -1,4 +1,5 @@
 import csv
+import re
 from record import *
 
 return_records = []
@@ -16,9 +17,17 @@ with open('return_record.csv') as csv_file:
     read = row[4]
 
     try:
-      pages_tested = int(pages)
+      int(pages)
     except:
       print "Did not find pages for: %s" %(title)
+      errors += 1
+      continue
+
+    try:
+      pattern = re.compile("/^d{3}.d{3}w{3}/")
+      pattern.match(decimal_category)
+    except:
+      print "Did not find Dewey Decimal Category for: %s" %(title)
       errors += 1
       continue
 
