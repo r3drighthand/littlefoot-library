@@ -1,9 +1,5 @@
 from return_record_parser import return_records, errors
-
-def run_everything():
-  print_errors()
-  count_total_pages_read()
-  count_pages_by_category()
+  
 
 def get_category_dictionary():
   category_dictionary = {}
@@ -34,13 +30,12 @@ def count_pages_by_category():
   print '  ' + '  '.join(['{0}: {1}\n'.format(key, value) for key, value in dictionary.iteritems()])
 
 def print_errors():
-  if errors == 1:
-    print "1 error \n" %(errors)
-  elif errors > 1:
-    print "%s errors \n" %(errors)
-  else:
-    print "0 errors \n"
+  if errors > 0:
+    print "%s error(s) \n" %(errors)
+  
 
 ####
 
-run_everything()
+print_errors()
+count_total_pages_read()
+count_pages_by_category()
